@@ -1,10 +1,7 @@
-class Atelier < ApplicationRecord
+  class Atelier < ApplicationRecord
 
-  def show
-  end
-
-  def index
-  end
+  validates :name, uniqueness: true, presence: true
+  validates :address, presence: true
 
 
 end
