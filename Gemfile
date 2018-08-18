@@ -16,6 +16,11 @@ gem 'simple_form'
 gem 'uglifier'
 gem 'webpacker'
 
+gem "geocoder"
+gem 'forest_liana'
+gem 'cloudinary'
+gem 'mail_form'
+
 group :development do
   gem 'web-console', '>= 3.3.0'
 end
