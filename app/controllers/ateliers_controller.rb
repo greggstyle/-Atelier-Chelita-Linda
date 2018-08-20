@@ -29,7 +29,7 @@ class AteliersController < ApplicationController
       render :edit
     end
   end
-  end
+
 
   def destroy       # DELETE /restaurants/:id
   end

@@ -22,3 +22,65 @@
   opacity: 0.6;
   margin-bottom: 30px;
 }
+
+.btn-home-atelier {
+  color: #DBB645;
+  background-color: #5B5122;
+  border-color: #5B5122;
+}
+
+.btn-home-atelier:hover,
+.btn-home-atelier:focus,
+.btn-home-atelier:active,
+.btn-home-atelier.active,
+.open .dropdown-toggle.btn-home-atelier {
+  color: #DBB645;
+  background-color: #3F4031;
+  border-color: #5B5122;
+}
+
+.btn-home-atelier:active,
+.btn-home-atelier.active,
+.open .dropdown-toggle.btn-home-atelier {
+  background-image: none;
+}
+
+.btn-home-atelier.disabled,
+.btn-home-atelier[disabled],
+fieldset[disabled] .btn-home-atelier,
+.btn-home-atelier.disabled:hover,
+.btn-home-atelier[disabled]:hover,
+fieldset[disabled] .btn-home-atelier:hover,
+.btn-home-atelier.disabled:focus,
+.btn-home-atelier[disabled]:focus,
+fieldset[disabled] .btn-home-atelier:focus,
+.btn-home-atelier.disabled:active,
+.btn-home-atelier[disabled]:active,
+fieldset[disabled] .btn-home-atelier:active,
+.btn-home-atelier.disabled.active,
+.btn-home-atelier[disabled].active,
+fieldset[disabled] .btn-home-atelier.active {
+  background-color: #5B5122;
+  border-color: #5B5122;
+}
+
+.btn-home-atelier .badge {
+  color: #5B5122;
+  background-color: #DBB645;
+}
+
+.container-home-ubicacion {
+  height: 0;
+  overflow: hidden;
+  padding-bottom: 60%; /* aspect ratio */
+  position: relative;
+}
+
+.googlemap-home {
+  border: 0;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
