@@ -1,0 +1,24 @@
+
+<div class="wrapper-orange">
+  <br>
+  <div class="container-index">
+    <div class="row">
+      <% @ateliers.each do |atelier| %>
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(<%= atelier.photo %> );">
+          <div class="card-description">
+            <h2><%= atelier.name %></h2>
+            <br>
+            <%  if atelier.price != [ ] %>
+            <h5> Lugares disponibles : <%= atelier.places %> max</h5>
+            <h5> $<%= atelier.price %></h5>
+            <% end %>
+          </div>
+          <%#= link_to "", atelier_path(atelier), class: 'card-link' %>
+        </div>
+      </div>
+      <% end %>
+    </div>
+  </div>
+  <br>
+</div>

@@ -1,13 +1,16 @@
 class AteliersController < ApplicationController
+  # before_action :atelier_params, only: [ :show, :edit, :update, :destroy]
 
   def index         # GET /restaurants
     @ateliers = Atelier.all
   end
 
   def show          # GET /restaurants/:id
+    @atelier = Atelier.find(params[:id])
   end
 
   def new           # GET /restaurants/new
+    @atelier = Atelier.new
   end
 
   def create        # POST /restaurants
@@ -20,9 +23,11 @@ class AteliersController < ApplicationController
   end
 
   def edit          # GET /restaurants/:id/edit
+  @atelier = Atelier.find(params[:id])
   end
 
   def update        # PATCH /restaurants/:id
+    @atelier = Atelier.find(params[:id])
     if @atelier.update(atelier_params)
       redirect_to atelier_path(@atelier)
     else
@@ -32,12 +37,15 @@ class AteliersController < ApplicationController
 
 
   def destroy       # DELETE /restaurants/:id
+    @atelier = Atelier.find(params[:id])
+    @atelier.destroy
+    redirect_to ateliers_path
   end
 
-  private
+  # private
 
-  def atelier_params
-    params.require(:atelier).permit(:name, :address)
-  end
+  # def atelier_params
+  #   params.require(:atelier)
+  # end
 
 end

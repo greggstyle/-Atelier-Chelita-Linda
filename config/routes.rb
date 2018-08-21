@@ -17,7 +17,7 @@ Rails.application.routes.draw do
   resources :ateliers
 
 
-    namespace :admin do
-    resources :atelier, only: [:index]
-  end
+  #   namespace :admin do
+  #   resources :atelier, only: [:index]
+  # end
 end
