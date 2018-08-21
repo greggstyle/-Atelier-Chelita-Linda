@@ -1,12 +1,31 @@
 <div class ="container">
   <div class="row">
-    <div class="col-sm-offset-2 col-sm-10">
+    <div class="col-xs-12">
 
       <ul>
-        <h1> Atelier </h1>
-        <h3><%= atelier.name %></h3>
+        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(<%= @atelier.photo %> );">
+        </div>
       </ul>
-      <%= link_to "home", root_path, class: 'btn btn-info'%>
+      <h1><%= @atelier.name %></h1>
+      <p><%= @atelier.description %></p>
+      <br>
+      <br>
+      <p>Degustación de varias cervezas incluidas
+      Llévate 48 botellas de tu cerveza con etiqueta personalizada y su propio nombre</p>
+
+      <h5> Lugares disponibles : <%= @atelier.places %> ollas máximo</h5>
+      <h5> Tiempo : <%= @atelier.tiempo %> horas </h5>
+      <h5> Días : de Martes a Sábado (2 sesiones el Sábado) </h5>
+      <h5> Horario : de 7pm a 11pm de Martes a Viernes <br> Sabado de 8am a 12am y de 2pm a 6pm </h5>
+      <h5> $<%= @atelier.price %> pesos por olla (pueden ser 1 o 2 personas por olla)</h5>
+      <br>
+      <div class="show-button">
+        <%= link_to "reservar", contact_path, class: 'btn btn-success'%>
+        <%= link_to "todos os ateliers", ateliers_path, class: 'btn btn-info'%>
+      </div>
+      <br>
+
+      <p> Si eres una empresa o un grupo y te interesa privatizar este taller para tus colaboradores, mandanos un email a teambuilding@notremarque.com y te mandaremos una cotización. </p>
     </div>
   </div>
 </div>
