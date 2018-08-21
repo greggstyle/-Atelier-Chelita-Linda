@@ -14,7 +14,7 @@
       Llévate 48 botellas de tu cerveza con etiqueta personalizada y su propio nombre</p>
 
       <h5> Lugares disponibles : <%= @atelier.places %> ollas máximo</h5>
-      <h5> Tiempo : <%= @atelier.tiempo %> horas </h5>
+      <h5> Tiempo : <%= @atelier.tiempo.strftime('%H') %> horas </h5>
       <h5> Días : de Martes a Sábado (2 sesiones el Sábado) </h5>
       <h5> Horario : de 7pm a 11pm de Martes a Viernes <br> Sabado de 8am a 12am y de 2pm a 6pm </h5>
       <h5> $<%= @atelier.price %> pesos por olla (pueden ser 1 o 2 personas por olla)</h5>
