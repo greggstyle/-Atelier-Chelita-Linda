@@ -1,6 +1,14 @@
 
+<div class="banner-index" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('https://res.cloudinary.com/greggstyle/image/upload/v1534063213/TALLER%20-%20Chelita%20Linda/6109431763_f6edd2aa9f_b.jpg');">
+  <div class="banner-content-index">
+    <h1>Taller para hacer tu propia cerveza</h1>
+<!--     <p>Taller degustación y maridaje</p> -->
+  </div>
+</div>
+
 <div class="wrapper-orange">
   <br>
+
   <div class="container">
     <div class="row">
       <% @ateliers.each do |atelier| %>
@@ -10,7 +18,7 @@
             <h2><%= atelier.name %></h2>
             <br>
             <%  if atelier.price != [ ] %>
-            <h5> Lugares disponibles : <%= atelier.places %> max</h5>
+            <h5> Lugares disponibles : <%= atelier.places %> max</h5> <br>
             <h5> $<%= atelier.price %></h5>
             <% end %>
           </div>

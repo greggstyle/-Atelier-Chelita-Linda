@@ -1,0 +1,37 @@
+.image-show{
+  border: 1px solid #dddddd;
+  height: 375px;
+  width: 100%;
+  background-size: cover !important;
+  background-position: center;
+}
+
+.image-show-schema {
+  border: 1px solid #dddddd;
+  height: 375px;
+  width: 100%;
+  background-size: cover !important;
+  background-position: center;
+}
+
+.image-show img{
+  height: 100%;
+  width: 100%;
+}
+
+.view-wrapper {
+  float: right;
+  max-width: 70%;
+  margin-top: 25px;
+}
+
+.description-show{
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.image-show-text {
+  font-size: 15px;
+  // margin: 10px;
+  // padding: 10px;
+}

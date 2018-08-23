@@ -2,30 +2,156 @@
   <div class="row">
     <div class="col-xs-12">
 
-      <ul>
-        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(<%= @atelier.photo %> );">
-        </div>
-      </ul>
-      <h1><%= @atelier.name %></h1>
-      <p><%= @atelier.description %></p>
-      <br>
-      <br>
-      <p>Degustación de varias cervezas incluidas
-      Llévate 48 botellas de tu cerveza con etiqueta personalizada y su propio nombre</p>
-
-      <h5> Lugares disponibles : <%= @atelier.places %> ollas máximo</h5>
-      <h5> Tiempo : <%= @atelier.tiempo.strftime('%H') %> horas </h5>
-      <h5> Días : de Martes a Sábado (2 sesiones el Sábado) </h5>
-      <h5> Horario : de 7pm a 11pm de Martes a Viernes <br> Sabado de 8am a 12am y de 2pm a 6pm </h5>
-      <h5> $<%= @atelier.price %> pesos por olla (pueden ser 1 o 2 personas por olla)</h5>
-      <br>
-      <div class="show-button">
-        <%= link_to "reservar", contact_path, class: 'btn btn-success'%>
-        <%= link_to "todos os ateliers", ateliers_path, class: 'btn btn-info'%>
-      </div>
+<!--       <div class="show-button">
+        <%#= link_to "reservar", contact_path, class: 'btn btn-success'%>
+        <%#= link_to "todos os ateliers", ateliers_path, class: 'btn btn-info'%>
+      </div> -->
       <br>
 
-      <p> Si eres una empresa o un grupo y te interesa privatizar este taller para tus colaboradores, mandanos un email a teambuilding@notremarque.com y te mandaremos una cotización. </p>
+      <!--       <p> Si eres una empresa o un grupo y te interesa privatizar este taller para tus colaboradores, mandanos un email a teambuilding@notremarque.com y te mandaremos una cotización. </p> -->
     </div>
   </div>
 </div>
+
+
+<div class="wrapper-blue">
+  <div class="container">
+    <!--     <h6> <%= link_to "nuestros tallers", ateliers_path, class: 'btn btn-link'%> > <%= link_to "atelier", atelier_path, class: 'btn btn-link'%> </h6> -->
+    <!--        INFORMATION ON TOP FO IMAGE -->
+<!--       <br>
+      Degustación de varias cervezas incluidas
+      Llévate 48 botellas de tu cerveza con etiqueta personalizada y su propio nombre
+      <br>
+      <br> -->
+      <!--        IMAGE ON THE LEFT SIDE -->
+      <div class="row">
+        <div class="col-xs-12 col-md-6">
+          <div class="image-show" style = "background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(<%= @atelier.photo %> );">
+          </div>
+          <br>
+          <div class="image-show-text">
+           <p>Tiempo : <strong> <%= @atelier.tiempo.strftime('%H') %> horas </strong> </p>
+           <br>
+           <p> Price : <strong> $<%= @atelier.price %> pesos por olla </strong> (pueden ser 1 o 2 personas por olla) <br> <strong> Llévate 48 botellas </strong> !! </p>
+           <br>
+         </div>
+       </div>
+
+       <div class="col-xs-12 col-md-6">
+        <h3> <%= @atelier.name %> </h3>
+        <h5> <%#= @atelier.category %> </h5>
+        <br>
+        Degustación de varias cervezas incluidas
+        Llévate 48 botellas de tu cerveza con etiqueta personalizada y su propio nombre
+        <br>
+<!--         <span class="label label-primary">available</span>
+  <span class="monospaced">No. <%#= @drone.user_id %></span> -->
+  <br>
+  <p class="description-show">
+    <%= @atelier.description %>
+    <br>
+
+
+  </p>
+<!--         <div class="col-md-4">
+          <span class="sr-only">Four out of Five Stars</span>
+          <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+          <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+          <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+          <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+          <span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
+          <span class="label label-primary" id="jason"> <%#= @drone.reviews.size %> </span>
+        </div>
+        <div class="col-md-4">
+          <span class="monospaced">Write a review</span>
+        </div> -->
+        <br>
+        <div >
+          <h3 >$ <%= @atelier.price %> </h3>
+        </div>
+        <br>
+        <div class="show-button">
+          <%= link_to "reservar", contact_path, class: 'btn btn-success'%>
+          <%#= link_to "todos os ateliers", ateliers_path, class: 'btn btn-info'%>
+        </div>
+
+        <br>
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs" role="tablist">
+          <li role="presentation" class="active">
+            <a href="#description"
+            aria-controls="description"
+            role="tab"
+            data-toggle="tab"
+            >Horarios</a>
+          </li>
+          <li role="presentation">
+            <a href="#dias"
+            aria-controls="dias"
+            role="tab"
+            data-toggle="tab"
+            >Días</a>
+          </li>
+          <li role="presentation">
+            <a href="#lugares"
+            aria-controls="lugares"
+            role="tab"
+            data-toggle="tab"
+            >Lugares disponibles</a>
+          </li>
+          <li role="presentation">
+            <a href="#empresas"
+            aria-controls="empresas"
+            role="tab"
+            data-toggle="tab"
+            >Empresas</a>
+          </li>
+        </ul>
+
+        <!-- TAB PANELS INFORMATION -->
+        <div class="tab-content">
+          <div role="tabpanel" class="tab-pane active" id="description">
+            <p><strong> Martes a Viernes </strong> de 7pm a 11pm <br>
+              <strong> Sabado </strong> de 8am a 12am <br>
+              <strong> Sabado </strong> de 2pm a 6pm </p>
+            </div>
+            <div role="tabpanel" class="tab-pane top-10" id="lugares">
+              <p>Lugares disponibles : <strong> 30 ollas máximo </strong></p>
+            </div>
+            <div role="tabpanel" class="tab-pane top-10" id="dias">
+              <p>de Martes a Sábado (2 sesiones el Sábado)</p>
+            </div>
+
+            <div role="tabpanel" class="tab-pane top-10" id="empresas">
+              <p>Si eres una empresa o un grupo y te interesa privatizar este taller para tus colaboradores, mandanos un email a teambuilding@notremarque.com y te mandaremos una cotización.</p>
+            </div>
+
+            <br>
+          </div>
+
+        </div>
+        <%#= render 'reviews/form', drone: @drone, review: @review %>
+      </div>
+      <!--           <p> Si eres una empresa o un grupo y te interesa privatizar este taller para tus colaboradores, mandanos un email a teambuilding@notremarque.com y te mandaremos una cotización. </p> -->
+    </div>
+
+
+
+<!--       <div class="image-show-schema" style = "background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url("https://res.cloudinary.com/greggstyle/image/upload/v1534063213/TALLER%20-%20Chelita%20Linda/6109431763_f6edd2aa9f_b.jpg");">
+      </div> -->
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
